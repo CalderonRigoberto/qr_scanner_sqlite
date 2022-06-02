@@ -8,8 +8,10 @@ class CustomBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     final uiProvider = Provider.of<OptionSelected>(context);
     final currentIndex = uiProvider.selectedMenuOption;
+
     return BottomNavigationBar(
       onTap: (value) => uiProvider.selectedMenuOption = value,
       currentIndex: currentIndex,
